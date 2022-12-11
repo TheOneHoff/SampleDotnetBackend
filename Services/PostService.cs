@@ -6,15 +6,16 @@ namespace SampleBackend.Services;
 public static class PostService
 {
     static List<Post> Posts { get; }
-    static int nextId = 101;
+    static int nextId = 2;
     static PostService()
     {
         var awaiter = CallPosts();
         var result = awaiter.Result;
         List<Post>? convert = JsonSerializer.Deserialize<List<Post>>(result);
-        if (convert != null)
+        if (convert is not null)
         {
             Posts = convert;
+            nextId = convert.Count;
         }
         else
         {
@@ -22,13 +23,14 @@ public static class PostService
                 new Post {
                     userId = 1,
                     id = 1,
-                    title = "quidem molestiae enim"
+                    title = "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+                    body = "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
                 }
             };
         }
     }
 
-    public static async Task<string> CallPosts()
+    private static async Task<string> CallPosts()
     {
         using var client = new HttpClient();
         var response = client.GetStringAsync("https://jsonplaceholder.typicode.com/posts");

@@ -6,15 +6,16 @@ namespace SampleBackend.Services;
 public static class AlbumService
 {
     static List<Album> Albums { get; }
-    static int nextId = 101;
+    static int nextId = 2;
     static AlbumService()
     {
         var awaiter = CallAlbums();
         var result = awaiter.Result;
         List<Album>? convert = JsonSerializer.Deserialize<List<Album>>(result);
-        if (convert != null)
+        if (convert is not null)
         {
             Albums = convert;
+            nextId = convert.Count;
         }
         else
         {
@@ -28,7 +29,7 @@ public static class AlbumService
         }
     }
 
-    public static async Task<string> CallAlbums()
+    private static async Task<string> CallAlbums()
     {
         using var client = new HttpClient();
         var response = client.GetStringAsync("https://jsonplaceholder.typicode.com/albums");

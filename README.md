@@ -15,6 +15,15 @@ Sample .NET webapi for Silverhorse Tech Team
 Install httprepl
 * dotnet tool install -g Microsoft.dotnet-httprepl
 
+Connect httprepl
+* httprepl https://localhost:7044
+
+Navigate to api endpoints using ls and cd
+
+To enable authorization of your requests use:
+* set header Authorization "Bearer af24353tdsfw"
+to set the auth header correctly
+
 ## Project Requirements
 Build a .NET WebApi application using Visual Studio or Visual Studio Code.
 

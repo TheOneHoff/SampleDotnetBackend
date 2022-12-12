@@ -3,7 +3,7 @@ Sample .NET wepapi for Silverhorse Tech Team
 
 ## Install Requirements
 * .NET SDK v 6.0
- * https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+  * https://dotnet.microsoft.com/en-us/download/dotnet/6.0
  
 ## Running the project
 1. Install the .NET SDK, including adding to PATH

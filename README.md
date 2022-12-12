@@ -1,5 +1,5 @@
 # SampleDotnetBackend
-Sample .NET wepapi for Silverhorse Tech Team
+Sample .NET webapi for Silverhorse Tech Team
 
 ## Install Requirements
 * .NET SDK v 6.0

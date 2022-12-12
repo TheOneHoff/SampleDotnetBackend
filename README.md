@@ -1,7 +1,21 @@
 # SampleDotnetBackend
 Sample .NET wepapi for Silverhorse Tech Team
 
-## Requirements
+## Install Requirements
+* .NET SDK v 6.0
+ * https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+ 
+## Running the project
+1. Install the .NET SDK, including adding to PATH
+2. Clone the repo
+3. Open the repo directory in a terminal (powershell, cmd, bash, etc.)
+4. dotnet run
+
+## Testing
+Install httprepl
+* dotnet tool install -g Microsoft.dotnet-httprepl
+
+## Project Requirements
 Build a .NET WebApi application using Visual Studio or Visual Studio Code.
 
 It will act as an API server providing a set of CRUD endpoints as well as an aggregation one. Use https://jsonplaceholder.typicode.com/ as a datasource and more specifically the following 3 resources.

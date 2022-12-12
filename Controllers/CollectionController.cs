@@ -1,3 +1,4 @@
+using SampleBackend.Authorization;
 using SampleBackend.Models;
 using SampleBackend.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ public class Resources
     public List<User>? Users { get; set;}
 }
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class CollectionController : ControllerBase

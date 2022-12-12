@@ -1,9 +1,11 @@
+using SampleBackend.Authorization;
 using SampleBackend.Models;
 using SampleBackend.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SampleBackend.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class PostsController : ControllerBase

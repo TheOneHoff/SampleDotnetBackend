@@ -21,10 +21,12 @@ public class CollectionController : ControllerBase
     {
         // Randomise the number of items for each resource
         Random rnd = new Random();
+        /*
         int u = rnd.Next(0,10);
         int p = rnd.Next(0,30-u);
         int a = 30 - u - p;
-
+        */
+        int u; int p; int a; a = u = p = 30;
         // Get the total number of each resource
         int postCount = PostService.GetAll().Count;
         int albumCount = AlbumService.GetAll().Count;
